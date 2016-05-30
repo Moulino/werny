@@ -1,0 +1,35 @@
+{
+    "name": "moulino/framework-app",
+    "description": "Minimal application for using the moulino framework.",
+    "type": "Application php",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Moulino",
+            "email": "olive.emmanuel@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/Moulino/Framework.git"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "Moulino/Framework": "*",
+        "robmorgan/phinx": "master",
+        "symfony/console": "~2.8|~3.0"
+    },
+
+    "require-dev": {
+        "php": ">=5.3.3"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    }
+}

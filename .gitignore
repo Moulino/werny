@@ -1,0 +1,7 @@
+/vendor/
+/node_modules/
+/logs/*
+/mysql_db/
+/server_config/mail/esmtprc
+/app/Resources/config/parameters.php
+composer.lock

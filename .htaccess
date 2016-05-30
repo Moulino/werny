@@ -1,0 +1,6 @@
+Options -Indexes
+Options -Multiviews
+Options +FollowSymLinks
+AddDefaultCharset UTF-8
+RewriteEngine On
+RewriteRule (.*) web/$1 [L]
