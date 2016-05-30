@@ -1,0 +1,136 @@
+<?php
+	
+return array(
+	'app' => array(
+		'mode'        => 'dev', // dev | prod
+		'date_format' => 'd/m/y H:i:s', // php format
+		'language'    => 'fr',
+		'charset'     => 'utf8'
+	),
+
+	'database' => array(
+		'host'     => 'db',
+		'name'     => '',
+		'user'     => '',
+		'password' => ''
+	),
+
+	'entities' => array(
+		'User' => array(
+			'table'      => 'user',
+			'validation' => array(
+				'user_id' => 'required|string|unique',
+				'name'    => 'required|string',
+				'mail'    => 'required|mail',
+				'roles'   => 'string'
+			)
+		),
+
+		'Product' => array(
+			'table'      => 'product',
+			'validation' => array(
+				'label' => 'required|unique'
+			)
+		)
+	),
+
+	'security' => array(
+		'salt'     => 'H%d8k@OTacyYseK@',
+		'entity'   => 'User',
+		'firewall_rules' => array(
+			array(
+				'path' => '^/',
+				'roles' => 'ANONYMOUS'
+			),
+			array(
+				'path' => '^/auth/log',
+				'roles' => 'ANONYMOUS'
+			),
+			array(
+				'path' => '^/auth/logout',
+				'roles' => 'IS_AUTHENTICATED'
+			),
+			array(
+				'path' => '^/change-password',
+				'roles' => 'IS_AUTHENTICATED'
+			),
+			array(
+				'path' => '^/users',
+				'roles' => 'ADMIN'
+			)
+		)
+	),
+
+	'routes' => array(
+		array(
+			'path'     => '^/$',
+			'method'   => 'GET',
+			'callable' => 'Default:index',
+		),
+		array(
+			'path'     => '^/auth/login$',
+			'method'   => 'POST',
+			'callable' => 'Auth:login'
+		),
+		array(
+			'path'     => '^/auth/logout$',
+			'method'   => 'GET',
+			'callable' => 'Auth:logout',
+		),
+		array(
+			'path' => '^/change-password$',
+			'method' => 'POST',
+			'callable' => 'User:changePassword'
+		),
+		array(
+			'path' => '^/users/regenerate-password$',
+			'method' => 'POST',
+			'callable' => 'User:regeneratePassword'
+		),
+		array(
+			'path'     => '^/users$',
+			'method'   => 'GET',
+			'callable' => 'User:list'
+		),
+		array(
+			'path'         => '^/users/:id$',
+			'method'       => 'GET',
+			'callable'     => 'User:get',
+			'requirements' => array(
+				'id' => '\d+'
+			)
+		),
+		array(
+			'path'     => '^/users$',
+			'method'   => 'POST',
+			'callable' => 'User:add'
+		),
+		array(
+			'path'         => '^/users/:id$',
+			'method'       => 'POST',
+			'callable'     => 'User:set',
+			'requirements' => array(
+				'id' => '\d+'
+			)
+		),
+		array(
+			'path'         => '^/users/:id$',
+			'method'       => 'DELETE',
+			'callable'     => 'User:remove',
+			'requirements' => array(
+				'id' => '\d+'
+			)
+		)
+	),
+
+	'mailer' => array(
+		'receiver' => ''
+	),
+
+	'logger' => array(
+		'enable_mailer' => false,
+		'sender' => '',
+		'receiver' => '',
+		'subject' => ''
+	)
+);
