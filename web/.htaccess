@@ -1,0 +1,11 @@
+<ifmodule mod_headers.c>
+	Header set X-Content-Type-Options nosniff
+	Header set X-Frame-Options DENY
+	Header set Content-Security-Policy "script-src 'self' https://www.google.com/maps"
+	Header set X-XSS-Protection "1; mode=block"
+</ifmodule>
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.php [L]
