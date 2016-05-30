@@ -1,0 +1,27 @@
+db:
+    image: mysql
+    volumes:
+        - ./mysql_db:/var/lib/mysql
+    environment:
+        MYSQL_ROOT_PASSWORD: root
+
+web:
+    image: framework-app-web
+    volumes:
+        - ./:/var/www/html
+        - ./server_config/php.ini:/usr/local/etc/php/php.ini
+        - ./server_config/mail/esmtprc:/etc/esmtprc
+    ports:
+        - "8000:80"
+    links:
+        - "db:db"
+    command: bash -c "cp /etc/esmtprc /root/.esmtprc && chmod 710 /root/.esmtprc && chown www-data:www-data /root/.esmtprc && chmod +x /root && apache2-foreground"
+
+phpmyadmin:
+    image: corbinu/docker-phpmyadmin
+    environment:
+        MYSQL_USERNAME: root
+    ports:
+        - "8001:80"
+    links:
+        - "db:mysql"
