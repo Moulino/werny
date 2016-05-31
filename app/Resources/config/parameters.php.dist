@@ -26,10 +26,10 @@ return array(
 			)
 		),
 
-		'Product' => array(
-			'table'      => 'product',
+		'Article' => array(
+			'table'      => 'articles',
 			'validation' => array(
-				'label' => 'required|unique'
+				'label' => 'required|unique',
 			)
 		)
 	),
