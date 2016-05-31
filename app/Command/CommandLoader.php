@@ -20,6 +20,9 @@ class CommandLoader
 			new RemoveUser(
 				$this->container->get('user_model')
 			),
+			new ListUser(
+				$this->container->get('user_list')
+			),
 			new SetUserPassword(
 				$this->container->get('user_model'),
 				$this->container->get('password_encoder')
@@ -30,7 +33,7 @@ class CommandLoader
 			),
 			new RemoveArticle(
 				$this->container->get('article_model')
-			)
+			),
 		];
 	}
 }
