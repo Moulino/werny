@@ -28,11 +28,13 @@ class CreateUserTable extends AbstractMigration
     public function change()
     {
         $this->table('user')
-            ->addColumn('user_id', 'string', array('limit' => 20))
-            ->addColumn('name', 'string', array('limit' => 20))
-            ->addColumn('mail', 'string', array('limit' => 50))
-            ->addColumn('roles', 'string', array('limit' => 100))
+            ->addColumn('user_id', 'string', array('limit' => 100))
+            ->addColumn('name', 'string', array('limit' => 100))
+            ->addColumn('password', 'string', array('limit' => 100))
+            ->addColumn('mail', 'string', array('limit' => 100))
+            ->addColumn('roles', 'string', array('limit' => 100, 'null' => true))
             ->addColumn('errors', 'integer')
+            ->addIndex(array('user_id'), array('unique' => true))
             ->create();
     }
 }

@@ -8,7 +8,7 @@ class CreateArticleTable extends AbstractMigration
     {
         $this->table('article')
             ->addColumn('label', 'string', array('limit' => 100))
-            ->addColumn('content', 'text')
+            ->addColumn('content', 'text', array('null' => true))
             ->create();
     }
 }
