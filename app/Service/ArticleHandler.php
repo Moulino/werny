@@ -31,7 +31,7 @@ class ArticleHandler
 	}
 
 	public function get($label) {
-		$this->model->get(array('label' => $label));
+		return $this->model->get(array('label' => $label));
 	}
 
 	public function all() {
