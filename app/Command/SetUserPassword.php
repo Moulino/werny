@@ -39,7 +39,7 @@ class SetUserPassword extends Command
 		if($rowAffected) {
 			$output->writeln("<info>The new password for user '$user_id' has been affected.</info>");
 		} else {
-			$output->writeln("<error>The user '$user_id' was not found.");
+			$output->writeln("<error>The user '$user_id' was not found.</error>");
 		}
 	}
 
