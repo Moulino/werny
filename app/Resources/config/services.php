@@ -2,6 +2,11 @@
 
 return array(
 
+	'command_loader' => array(
+		'class' => 'App\\Command\\CommandLoader',
+		'arguments' => array("@container")
+	),
+
 	'article_handler' => array(
 		'class' => 'App\\Service\\ArticleHandler',
 		'arguments' => array("@article_model", "@translator")
