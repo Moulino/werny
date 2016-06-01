@@ -1,0 +1,79 @@
+.menu {
+    background-color: black;
+    opacity: 0.9;
+    color: white;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 63px;
+    height: 100%;
+
+    font-family: "SinkinSans_Regular";
+
+    transition-property: width;
+    transition-duration: 400ms;
+
+    -webkit-transition-property: width; /* Safari */
+    -webkit-transition-duration: 400ms; /* Safari */
+
+    overflow: hidden;
+    z-index: 2;
+
+    border-bottom-right-radius: 5px;
+    box-shadow: 1px 0 1px #000;
+}
+
+.menu:hover {
+    width: 230px;
+}
+
+.menu:hover img {
+    width: 60%;
+}
+
+.menu-logo {
+    height: 190px;
+    text-align: center;
+}
+
+.menu img {
+    width: 90%;
+    margin: 5% 5%;
+    transition-property: width;
+    transition-duration: 400ms;
+}
+
+.menu-label {
+    margin-left: 15px;
+    line-height: 40px;
+    font-size: 14px;
+    color: #FFF;
+
+    transition-property: color;
+    transition-duration: 400ms;
+    text-transform: none;
+}
+
+.menu-list-item .material-icons {
+    color: #FFF; /* bleu clair */
+    transition-property: color;
+    transition-duration: 400ms;
+    width: 63px;
+    text-align: center;
+}
+
+.menu-list-item:hover .material-icons,
+.menu-list-item:hover .menu-label,
+.menu-list-item.selected .material-icons,
+.menu-list-item.selected .menu-label {
+    color: #C6C; /* rose */
+}
+
+.menu-list-item .md-button {
+    width: 100%;
+    text-align: left;
+    margin-left: 0;
+    padding-left: 0;
+}

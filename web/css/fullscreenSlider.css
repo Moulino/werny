@@ -1,0 +1,12 @@
+.fullscreen-slider {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.fullscreen-slider-image {
+    position: absolute;
+}

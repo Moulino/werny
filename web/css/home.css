@@ -1,0 +1,64 @@
+section .home {
+    padding: 0;
+    margin: 0;
+}
+
+.home-title {
+    position: absolute;
+    width: 100%;
+    top: 200px;
+    text-align: center;
+    font-family: SinkinSans_Regular;
+    font-size: 4.5em;
+    color: #FFF;
+}
+
+.presentation-button-wrapper {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    text-align: center;
+
+    transition-property: opacity;
+    transition-duration: 200ms;
+}
+
+.presentation-button-wrapper.hidden {
+    opacity: 0;
+}
+
+.presentation-button-wrapper .md-button {
+    background-color: #000;
+    color: #FFF;
+    font-family: "SinkinSans_Regular";
+    
+    transition-property: color;
+    transition-duration: 400ms;
+}
+
+.presentation-button-wrapper .md-button:not([disabled]):hover,
+.presentation-button-wrapper .md-button:not([disabled]):hover .material-icons{
+    background-color: #000;
+    color: #C6C;
+}
+
+.presentation-button-wrapper .material-icons {
+    color: #FFF;
+    
+    transition-property: color;
+    transition-duration: 400ms;
+}
+
+#presentation {
+    position: absolute;
+    min-height: 100%;
+    padding: 20px 20px 20px 83px;
+}
+
+.factory .description {
+    width: 60%;
+}
+
+.factory .authorization {
+    width: 30%;
+}

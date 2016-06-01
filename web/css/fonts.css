@@ -1,0 +1,29 @@
+@font-face {
+	font-family: "SinkinSans_Thin";
+	src: url("/fonts/sinkin-sans/SinkinSans-100Thin.otf");
+}
+
+@font-face {
+	font-family: "SinkinSans_XLight";
+	src: url("/fonts/sinkin-sans/SinkinSans-200XLight.otf");
+}
+
+@font-face {
+	font-family: "SinkinSans_Light";
+	src: url("/fonts/sinkin-sans/SinkinSans-300Light.otf");
+}
+
+@font-face {
+	font-family: "SinkinSans_Regular";
+	src: url("/fonts/sinkin-sans/SinkinSans-400Regular.otf");
+}
+
+@font-face {
+	font-family: "SinkinSans_SemiBold";
+	src: url("/fonts/sinkin-sans/SinkinSans-600SemiBold.otf");
+}
+
+@font-face {
+	font-family: "SinkinSans_XBlack";
+	src: url("/fonts/sinkin-sans/SinkinSans-900XBlack.otf");
+}

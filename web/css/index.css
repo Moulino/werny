@@ -1,0 +1,35 @@
+
+body {
+    font-family: "SinkinSans_Regular";
+    font-size: 0.9em;
+}
+
+section {
+	position: relative;
+	margin-left: 63px;
+	padding: 0 2%;
+	font-size: 0.9em;
+}
+
+.back-to-top {
+	position: fixed;
+	bottom: 15px;
+	right: 15px;
+	width: 50px;
+	height: 49px;
+	min-width: 0px;
+	background-color: black;
+}
+
+.back-to-top md-icon {
+	width: 29px;
+	height: 29px;
+	margin-top: 3px;
+	vertical-align: top;
+}
+
+#factory-categories img,
+#factory-installation img,
+#factory-drague img {
+	width: 100%;
+}
