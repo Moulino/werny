@@ -21,7 +21,7 @@ class CommandLoader
 				$this->container->get('user_model')
 			),
 			new ListUser(
-				$this->container->get('user_list')
+				$this->container->get('user_model')
 			),
 			new SetUserPassword(
 				$this->container->get('user_model'),

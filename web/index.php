@@ -20,8 +20,6 @@ $svcLoader->loadModels();
 $container = $svcLoader->getContainer();
 $GLOBALS['service_container'] = $container;
 
-$container->get('commands_loader')->load();
-
 $container->get('routes_loader')->load();
 $container->get('translation_loader')->load();
 $container->get('firewall_loader')->load();
