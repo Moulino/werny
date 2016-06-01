@@ -7,14 +7,14 @@ use Moulino\Framework\Config\Config;
 	
 class DefaultController extends BaseController
 {
-		public function indexAction() {
-			$userModel = $this->getModel('User');
-			$users = $userModel->cget();
+	public function indexAction() {
+		$userModel = $this->getModel('User');
+		$users = $userModel->cget();
 
-			return $this->render('Default:index', array(
-				'users' => $users
-			));
-		}
+		return $this->render('Default:index', array(
+			'users' => $users
+		));
+	}
 }
 
 ?>
