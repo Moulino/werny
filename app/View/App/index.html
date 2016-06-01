@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf8">
+	<title>Ballastières Werny</title>
+	{% block stylesheets %}
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.0.7/angular-material.min.css">
+		<link rel="stylesheet" type="text/css" href="css/fonts.css">
+		<link rel="stylesheet" type="text/css" href="css/base.css">
+		<link rel="stylesheet" type="text/css" href="css/menu.css">
+		<link rel="stylesheet" type="text/css" href="css/slider.css">
+		<link rel="stylesheet" type="text/css" href="css/products.css">
+		<link rel="stylesheet" type="text/css" href="css/exploitation.css">
+		<link rel="stylesheet" type="text/css" href="css/quality.css">
+		<link rel="stylesheet" type="text/css" href="css/delivery.css">
+		<link rel="stylesheet" type="text/css" href="css/environment.css">
+		<link rel="stylesheet" type="text/css" href="css/contact.css">
+	{% endblock stylesheets %}
+
+	<base href="{% url 'base' %}" target="_blank"></base>
+
+</head>
+<body ng-app="App">
+
+	<div class="menu">
+		<div class="menu-logo" link="/">
+			<img src="{% static "app/pictures/logo.gif" %}">
+		</div>
+		<div class="menu-top">
+			<span class="title frg-pink">BALLASTIERES WERNY</span>
+			<ul>
+				<li link="/marquage_ce">MARQUAGE CE</li>
+				<li link="/contact"> NOUS CONTACTER</li>
+			</ul>
+		</div>
+		<div class="menu-bottom">
+			<ul>
+				<li link="/products">PRODUITS <i class="fa fa-angle-down"></i></li>
+				<li link="/quality">CONTR&Ocirc;LE QUALIT&Eacute;</li>
+				<li link="/exploitation">EXPLOITATION</li>
+				<li link="/achievements">R&Eacute;ALISATIONS</li>
+				<li link="/delivery">LIVRAISON</li>
+				<li link="/environment">ENVIRONNEMENT</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="section-container" ng-view></div>
+
+	<footer></footer>
+
+	{% block scripts %}
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.3/angular.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.3/angular-route.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.3/angular-animate.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.3/angular-aria.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.3/angular-cookies.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.0.7/angular-material.min.js"></script>
+		<script type="text/javascript" src="{% static "app/js/app.js" %}"></script>
+		<script type="text/javascript" src="{% static "app/js/directives.js" %}"></script>
+		<script type="text/javascript" src="{% static "app/js/controllers.js" %}"></script>
+	{% endblock scripts %}
