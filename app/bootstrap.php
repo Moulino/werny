@@ -7,9 +7,11 @@ define('CONTROLLER', APP.DS.'Controller');
 define('MODEL', APP.DS.'Model');
 define('VIEW', APP.DS.'View');
 define('LOGS', ROOT.DS.'logs');
+define('CACHE', ROOT.DS.'cache');
 define('WEBROOT', ROOT.DS.'web');
 define('VENDOR', ROOT.DS.'vendor');
 define('FRAMEWORK', VENDOR.DS.'moulino'.DS.'framework'.DS.'src');
+define('FRAMEWORK_VIEW', FRAMEWORK.DS.'Resources'.DS.'views');
 
 require VENDOR.'/autoload.php';
 
