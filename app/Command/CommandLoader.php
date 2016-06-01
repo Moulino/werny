@@ -34,6 +34,9 @@ class CommandLoader
 			new RemoveArticle(
 				$this->container->get('article_model')
 			),
+			new ListArticle(
+				$this->container->get('article_model')
+			)
 		];
 	}
 }
